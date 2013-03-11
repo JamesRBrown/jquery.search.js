@@ -2,7 +2,7 @@
   	Title: 			jquery.search.js
 	Author: 		James R. Brown
 	Date: 			3/10/13
-	Version: 		1.0
+	Version: 		1.0.0
 	Requirements: 	jQuery 1.1.4+ 
 	
 	The MIT License (MIT)
