@@ -1,5 +1,5 @@
 /*
-  Title: 			jquery.search.js
+  	Title: 			jquery.search.js
 	Author: 		James R. Brown
 	Date: 			3/10/13
 	Version: 		1.0
