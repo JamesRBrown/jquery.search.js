@@ -3,11 +3,11 @@ jquery.search.js
 
 <b>About:</b>
 
-jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking for a filter search tool and everything I found was slow, cumbersome, and feature poor.  jQuery Search is lightning quick, it intuitively behaves exactly as you'd expect of a jQuery tool, and because it's a jQuery plugin it automatically benifits from jQuery rich chainability approach!
+jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking for a filter search tool and everything I found was slow, cumbersome, and feature poor.  jQuery Search is lightning quick, intuitively behaves exactly as you'd expect of a jQuery tool, and because it's a jQuery plugin it automatically benifits from jQuery rich chainability approach!
 
 <b>Installation:</b>
 
-  Like any jQuery plugin, include the script in your project after you include jQuery (v1.1.4+).
+  Like any jQuery plugin, simply include the script in your project after you include jQuery (v1.1.4+).
 
 <b>The jQuery Search plugin provides three methods:</b>
 
