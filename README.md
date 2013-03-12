@@ -15,7 +15,7 @@ jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking 
 
   <i>orSearch</i>  – This is similar to the andSearch except that the terms are ORed together.
 
-  <i>Search</i>  – This is a simple search that tries to match the search string, treating spaces as part of a single search term.
+  <i>search</i>  – This is a simple search that tries to match the search string, treating spaces as part of a single search term.
 
 <b>Examples:</b>
 
