@@ -11,19 +11,26 @@ The jQuery Search plugin provides three methods:
 
   orSearch – This is similar to the andSearch except that the terms are ORed together.
 
-  Search – This is a simple search that tried to match the search string, treating spaces as part of a single search term.
+  Search – This is a simple search that tries to match the search string, treating spaces as part of a single search term.
 
 Examples:
 
-  Elm1: <div class=”search”>The quick brown fox</div>
-  Elm2: <div class=”search”>The slow red dog</div>
-  Elm3: <div class=”search”>The squirrel  is quickest</div>
+  Elm1: \<div class=”search”>The quick brown fox\</div>
+  
+  Elm2: \<div class=”search”>The slow red dog\</div>
+  
+  Elm3: \<div class=”search”>The squirrel  is quickest\</div>
 
-  $(‘.search’).andSearch(‘The quick’)
+    $(‘.search’).andSearch(‘The quick’)
+  
   Returns: Elm1 and Elm3
 
-  $(‘.search’).orSearch(‘The quick’)
+  
+    $(‘.search’).orSearch(‘The quick’)
+  
   Returns: Elm1, Elm2, and Elm3
 
-  $(‘.search’).search(‘The quick’)
+  
+    $(‘.search’).search(‘The quick’)
+  
   Returns: Elm1
