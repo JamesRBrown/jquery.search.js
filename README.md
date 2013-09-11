@@ -11,7 +11,7 @@ jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking 
 
 <b>Version 2 Features:</b>
 
-  Provides new case insensitive search functionality.  Works the same as the below described methods except case is ignored.
+  Provides new case insensitive search functionality.  
   
   The new methods are:
   
@@ -21,6 +21,8 @@ jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking 
     
     iSearch
 
+  (Works the same as the below described methods except case is ignored.)
+  
   <b>Please note:</b> there might be a slight performance hit using the case insensitive search over the regular case sensitive search.
 
 <b>The jQuery Search plugin provides three methods:</b>
