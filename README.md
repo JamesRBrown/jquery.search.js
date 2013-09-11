@@ -9,6 +9,20 @@ jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking 
 
   Like any jQuery plugin, simply include the script in your project after you include jQuery (v1.1.4+).
 
+<b>Version 2 Features:</b>
+
+  Provides new case insensitive search functionality.  Works the same as the below described features except case is ignored.
+  
+  The new methods are:
+  
+    iAndSearch
+    
+    iOrSearch
+    
+    iSearch
+
+  <b>Please note:</b> there might be a slight performance hit using the case insensitive search over the regular case sensitive search.
+
 <b>The jQuery Search plugin provides three methods:</b>
 
   <i>andSearch</i>  – This operates by evaluating a search string as a series of space delimited search terms that are ANDed together, similar to iTunes’ filter search.
@@ -38,3 +52,6 @@ jQuery Search is a fast and light weight jQuery DOM search tool.  I was looking 
     $(‘.search’).search(‘The quick’)
   
   Returns: <i>Elm1</i>
+  
+
+
