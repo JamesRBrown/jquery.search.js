@@ -1,8 +1,8 @@
 /*
-  	Title: 			jquery.search.js
+	Title: 			jquery.search.js
 	Author: 		James R. Brown
-	Date: 			3/10/13
-	Version: 		1.0.0
+	Date: 			6/7/13
+	Version: 		2.0
 	Requirements: 	jQuery 1.1.4+ 
 	
 	The MIT License (MIT)
@@ -25,10 +25,13 @@
 	CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
 	OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+jQuery.expr[':'].iContains = function(a,i,m){
+     return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
+};
 
 jQuery.extend( jQuery.fn, {
     andSearch: function(p) {
-        if (p.match(/[^\s]+/g) == null) return this;        
+        if (p.match(/[^\s]+/g) === null) return this;        
         var t = p.match(/[^\s]+/g);
 		var c = '';
 		for (var i = 0; i < t.length; i++) {
@@ -37,17 +40,40 @@ jQuery.extend( jQuery.fn, {
 		return $(this).filter(c);
     },
     orSearch: function(p) {
-        if (p.match(/[^\s]+/g) == null) return this;        
+        if (p.match(/[^\s]+/g) === null) return this;        
         var t = p.match(/[^\s]+/g);
 		var c = '';
 		for (var i = 0; i < t.length; i++) {
 			c += ':contains(' + t[i] + ')';
-			if(i+1 != t.length) c += ',';
+			if(i+1 !== t.length) c += ',';
 		}
 		return $(this).filter(c);
     },
 	search: function(p) {
-	   if (p.match(/.+/g) == null) return this;
+	   if (p.match(/.+/g) === null) return this;
 		return $(this).filter(':contains(' + p + ')');
+	},
+    iAndSearch: function(p) {
+        if (p.match(/[^\s]+/g) === null) return this;        
+        var t = p.match(/[^\s]+/g);
+		var c = '';
+		for (var i = 0; i < t.length; i++) {
+			c += ':iContains(' + t[i] + ')';
+		}
+		return $(this).filter(c);
+    },
+    iOrSearch: function(p) {
+        if (p.match(/[^\s]+/g) === null) return this;        
+        var t = p.match(/[^\s]+/g);
+		var c = '';
+		for (var i = 0; i < t.length; i++) {
+			c += ':iContains(' + t[i] + ')';
+			if(i+1 !== t.length) c += ',';
+		}
+		return $(this).filter(c);
+    },
+	iSearch: function(p) {
+	   if (p.match(/.+/g) === null) return this;
+		return $(this).filter(':iContains(' + p + ')');
 	}
 });
