@@ -52,9 +52,9 @@ jQuery.expr[':'].wildcard = function(a,i,m){
     var text = jQuery(a).text();
     return text.match(re) ? true : false;
 };
-jQuery.expr[':'].displayed = function(a,i,m){
+jQuery.expr[':'].displayNone = function(a,i,m){
     var result = jQuery(a).attr('style').match(/display:\s*none/);
-    return !result;
+    return !!result;
 }
 
 //Text searches
