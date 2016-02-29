@@ -26,7 +26,7 @@
 	OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-//supporting jQuery selectors
+//useful and supporting jQuery selectors
 jQuery.expr[':'].iContains = function(a,i,m){
      return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
 };
@@ -52,6 +52,10 @@ jQuery.expr[':'].wildcard = function(a,i,m){
     var text = jQuery(a).text();
     return text.match(re) ? true : false;
 };
+jQuery.expr[':'].displayed = function(a,i,m){
+    var result = jQuery(a).attr('style').match(/display:\s*none/);
+    return !result;
+}
 
 //Text searches
 jQuery.extend( jQuery.fn, {
