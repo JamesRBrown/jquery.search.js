@@ -53,9 +53,8 @@ jQuery.expr[':'].wildcard = function(a,i,m){
     return text.match(re) ? true : false;
 };
 jQuery.expr[':'].displayNone = function(a,i,m){
-    var result = jQuery(a).attr('style').match(/display:\s*none/);
-    return !!result;
-}
+    if(jQuery(a).attr('style')) return !!jQuery(a).attr('style').match(/display:\s*none/);
+};
 
 //Text searches
 jQuery.extend( jQuery.fn, {
