@@ -53,7 +53,7 @@ jQuery.expr[':'].wildcard = function(a,i,m){
     return text.match(re) ? true : false;
 };
 jQuery.expr[':'].displayNone = function(a,i,m){
-    if(jQuery(a).attr('style')) return !!jQuery(a).attr('style').match(/display:\s*none/);
+    if(jQuery(a).attr('style')) return !!jQuery(a).attr('style').match(/(display\s*:\s*none)/);
 };
 
 //Text searches
